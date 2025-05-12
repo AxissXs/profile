@@ -1,6 +1,9 @@
 <script lang="ts">
 	import '../app.css';
 
+	export const prerender = true;
+	export const ssr = false;
+
 	import Header from '$lib/components/Header.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import SideCard from '$lib/components/SideCard.svelte';
@@ -11,7 +14,7 @@
 
 	current_section.value = 'resume';
 
-	let lastUpdateDate = new Date("2025/01/05").toLocaleDateString($locale, {
+	let lastUpdateDate = new Date('2025/01/05').toLocaleDateString($locale, {
 		year: 'numeric',
 		month: 'long',
 		day: 'numeric'
@@ -48,7 +51,10 @@
 </div>
 
 {#if !$localeLoaded}
-	<div transition:slide={{duration:700, easing: backInOut }} class="bg-base-100 fixed inset-0 flex items-center justify-center">
+	<div
+		transition:slide={{ duration: 700, easing: backInOut }}
+		class="bg-base-100 fixed inset-0 flex items-center justify-center"
+	>
 		<span class="loading loading-infinity w-28"></span>
 	</div>
 {/if}

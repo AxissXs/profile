@@ -9,7 +9,7 @@
 	<div class="flex space-x-6">
 		<a href="/" class:active-nav={current_section.value == 'resume'}>{$__('nav.resume')}</a>
 		<a href="/skills" class:active-nav={current_section.value == 'skills'}>{$__('nav.skills')}</a>
-		<a href="/stack" class:active-nav={current_section.value == 'stack'}>{$__('nav.stacks')}</a>
+		<a href="/stacks" class:active-nav={current_section.value == 'stack'}>{$__('nav.stacks')}</a>
 		<a href="/projects" class:active-nav={current_section.value == 'projects'}>{$__('nav.projects')}</a>
 	</div>
 	<div class="ms-auto">
