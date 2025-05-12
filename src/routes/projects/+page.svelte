@@ -4,6 +4,7 @@
 	import { slide } from 'svelte/transition';
 	import type { PageData } from './$types';
 
+	// TODO: change the data structure
 	let data = {
 		projects: [
 			{
