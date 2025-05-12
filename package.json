@@ -41,5 +41,8 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint ."
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@vercel/analytics": "^1.5.0"
+	}
 }

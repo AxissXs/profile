@@ -1,9 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 
-	export const prerender = true;
-	export const ssr = false;
-
+	import { injectAnalytics } from '@vercel/analytics/sveltekit'
 	import Header from '$lib/components/Header.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import SideCard from '$lib/components/SideCard.svelte';
