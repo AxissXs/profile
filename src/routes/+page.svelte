@@ -30,22 +30,18 @@
 </script>
 
 <div transition:slide>
-	<section>
-		<h2 class="text-lg font-semibold">{$__('resume.brief')}</h2>
-		<p
-			class="mt-1 text-sm text-gray-700"
-			use:innerHtml={$__('resume.brief_desc', { years_of_experience: yearsOfExperience })}
-		>
-			<!-- {@html $__('resume.brief_desc', { years_of_experience: yearsOfExperience })} -->
-		</p>
-	</section>
+	{#key $locale}
+		<section>
+			<h2 class="text-lg font-semibold">{$__('resume.brief')}</h2>
+			<p
+				class="mt-1 text-sm text-gray-700"
+				use:innerHtml={$__('resume.brief_desc', { years_of_experience: yearsOfExperience })}
+			></p>
+		</section>
 
-	<section>
-		<h2 class="text-lg font-semibold">{$__('resume.experience')}</h2>
-		<!-- {#each $__('resume.experience_desc', experienceVariables) as experience} -->
-		<div class="mt-2" use:innerHtml={$__('resume.experience_desc', experienceVariables)}>
-			<!-- {@html experience} -->
-		</div>
-		<!-- {/each} -->
-	</section>
+		<section>
+			<h2 class="text-lg font-semibold">{$__('resume.experience')}</h2>
+			<div class="mt-2" use:innerHtml={$__('resume.experience_desc', experienceVariables)}></div>
+		</section>
+	{/key}
 </div>
