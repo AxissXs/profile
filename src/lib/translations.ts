@@ -6,6 +6,9 @@ interface Translations {
 
 export default {
 	en: {
+		'title': 'Amir Ghamari - Backend Developer',
+		'description': 'Amir Ghamari - Backend Developer, Laravel, PHP, Python, Django, API Development, Microservices, Application Security',
+		'keywords': 'Amir Ghamari, Backend Developer, Laravel, PHP, Python, Django, API Development, Microservices, Application Security',
 		'header.full_name': 'Amir Hossein Ghamari',
 		'header.profession': 'Backend Developer',
 		'header.location': 'Location',
@@ -79,6 +82,9 @@ export default {
 		'sidecard.date_of_graduation_desc': '{{year}}'
 	},
 	fa: {
+		'title': 'امیر قمری - توسعه‌دهنده‌ی بک‌اند',
+		'description': 'امیر قمری - توسعه‌دهنده‌ی بک‌اند، لاراول، PHP، پایتون، جنگو، توسعه API، میکروسرویس‌ها، امنیت نرم‌افزار',
+		'keywords': 'امیر قمری، توسعه‌دهنده‌ی بک‌اند، لاراول، PHP، پایتون، جنگو، توسعه API، میکروسرویس‌ها، امنیت نرم‌افزار',
 		'header.full_name': 'امیرحسین قمری',
 		'header.profession': 'توسعه‌دهنده‌ی بک‌اند',
 		'header.location': 'محل سکونت',

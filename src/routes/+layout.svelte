@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 
-	import { injectAnalytics } from '@vercel/analytics/sveltekit'
+	import { dev } from '$app/environment';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import Header from '$lib/components/Header.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import SideCard from '$lib/components/SideCard.svelte';
@@ -19,7 +20,22 @@
 	});
 
 	let { children, data } = $props();
+
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
+
+<svelte:head>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+
+	<title>{$__('title')}</title>
+
+	<meta name="description" content={$__('description')} />
+	<meta name="keywords" content={$__('keywords')} />
+	<meta name="author" content="Amir Hossein" />
+</svelte:head>
 
 <div
 	class:rtl={$locale === 'fa'}

@@ -24,8 +24,8 @@
 		end_date_tesmino: 'end t'
 	};
 
-	function innerHtml(node: HTMLElement, html: string) {
-		node.innerHTML = html;
+	function innerHtml(node: HTMLElement, html: string | string[]) {
+		node.innerHTML = Array.isArray(html) ? html.join('<br />') : html;
 	}
 </script>
 
