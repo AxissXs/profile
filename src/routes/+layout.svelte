@@ -13,10 +13,12 @@
 
 	current_section.value = 'resume';
 
-	let lastUpdateDate = new Date('2025/01/05').toLocaleDateString($locale, {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
+	let lastUpdateDate = $derived(() => {
+		return new Date('2025/01/05').toLocaleDateString($locale, {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		});
 	});
 
 	let { children, data } = $props();
@@ -57,7 +59,7 @@
 </div>
 
 <div>
-	<p class="fixed start-1 bottom-1 text-sm !text-gray-300">
+	<p class="fixed start-1 bottom-1 -z-10 text-sm !text-gray-300">
 		{$__('last_updated', {
 			date: lastUpdateDate
 		})}

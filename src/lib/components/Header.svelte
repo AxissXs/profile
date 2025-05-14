@@ -5,7 +5,7 @@
 	import Github from 'virtual:icons/cib/github';
 </script>
 
-<div class="flex items-center justify-between px-6 py-4">
+<div class="flex items-center md:flex-row gap-4 flex-col justify-between px-6 py-4">
 	<div class="flex items-center space-x-4">
 		<img
 			src="/images/photo.webp"
@@ -20,14 +20,14 @@
 			</p>
 		</div>
 	</div>
-	<div class="text-end">
+	<div class="md:text-end text-center">
 		<p class="text-sm text-gray-500">
 			{$__('header.current_position')}: <strong>{$__('header.current_position_desc')}</strong>
 		</p>
 		<p class="text-sm text-gray-500">
 			{$__('header.available_for')}: <strong>{$__('header.available_for_desc')}</strong>
 		</p>
-		<div class="mx-2 mt-1 inline-flex items-center gap-2 align-middle font-semibold text-slate-700">
+		<div class="mx-2 mt-1 inline-flex items-center gap-2 align-middle text-lg text-slate-700">
 			<a target="_blank" class="hover:text-primary" href="https://github.com/AxissXs">
 				<Github />
 			</a>
@@ -42,7 +42,7 @@
 			href="mailto:amir@kenvin.ir"
 			target="_blank"
 			class="btn btn-sm btn-primary mt-2 rounded px-2 py-1 text-sm !text-white shadow-xl shadow-indigo-500/40"
-			>Get in touch</a
+			>{$__('header.get_in_touch')}</a
 		>
 	</div>
 </div>

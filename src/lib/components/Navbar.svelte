@@ -5,7 +5,7 @@
 	import { __, locale} from '$lib/i18n';
 </script>
 
-<div class="flex border-b border-gray-100 px-6 py-3 text-sm font-medium text-gray-600">
+<div class="flex border-b border-gray-200 px-6 py-3 text-sm font-medium text-gray-600">
 	<div class="flex space-x-6">
 		<a href="/" class:active-nav={current_section.value == 'resume'}>{$__('nav.resume')}</a>
 		<a href="/skills" class:active-nav={current_section.value == 'skills'}>{$__('nav.skills')}</a>
@@ -15,13 +15,13 @@
 	<div class="ms-auto">
 		<div class="relative">
 			<div class="hover:text-primary group hover:cursor-pointer">
-				<Languages class="text-neutral" />
+				<Languages class="text-neutral text-lg" />
 				<div
 					class="absolute top-full end-0 hidden min-w-[100px] rounded-md bg-white shadow-lg group-hover:block"
 				>
 					{#each ['en', 'fa'] as lang}
 						<button
-							class="w-full px-4 py-1 text-start hover:bg-gray-100"
+							class="w-full px-2 font-bold text-gray-700 py-1 text-start rounded-md text-md hover:bg-gray-100"
 							class:active={$locale === lang}
 							on:click={() => ($locale = lang)}
 						>
