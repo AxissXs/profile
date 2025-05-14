@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { __, locale } from '$lib/i18n';
-	import { JalaliDateConverter as Jalali } from '$lib/JalaliDateConverter';
 
 	let birthDate = $derived(
 		new Date('1996/11/11').toLocaleDateString($locale, {
@@ -10,13 +9,13 @@
 		})
 	);
 
-	let yearOfGraduation = $derived(() =>
+	let yearOfGraduation = $derived(
 		new Date(2017, 0, 1).toLocaleDateString($locale, {
 			year: 'numeric'
 		})
 	);
 
-	const age = 29;
+	let age = $derived($locale == 'en' ? '29' : '۲۹');
 </script>
 
 <div class="h-fit space-y-6 rounded bg-gray-100 p-4 py-6 md:w-1/3">

@@ -13,13 +13,13 @@
 
 	current_section.value = 'resume';
 
-	let lastUpdateDate = $derived(() => {
-		return new Date('2025/01/05').toLocaleDateString($locale, {
+	let lastUpdateDate = $derived(
+		new Date('2025/01/05').toLocaleDateString($locale, {
 			year: 'numeric',
 			month: 'long',
 			day: 'numeric'
-		});
-	});
+		})
+	);
 
 	let { children, data } = $props();
 
@@ -36,7 +36,7 @@
 
 	<meta name="description" content={$__('description')} />
 	<meta name="keywords" content={$__('keywords')} />
-	<meta name="author" content="Amir Hossein" />
+	<meta name="author" content="Amir Ghamari" />
 </svelte:head>
 
 <div
@@ -50,11 +50,11 @@
 	<Navbar />
 
 	<div class="flex flex-col space-y-6 px-6 py-6 md:flex-row md:space-y-0 md:space-x-6">
+		<SideCard />
+
 		<div class="space-y-6 md:w-2/3">
 			{@render children()}
 		</div>
-
-		<SideCard />
 	</div>
 </div>
 
