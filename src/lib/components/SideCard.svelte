@@ -16,9 +16,11 @@
 	);
 
 	let age = $derived($locale == 'en' ? '29' : '۲۹');
+
+	let { baseExtraClasses } = $props();
 </script>
 
-<div class="h-fit space-y-6 rounded bg-gray-100 p-4 py-6 md:w-1/3">
+<div class="h-fit space-y-6 rounded bg-gray-100 p-4 py-6 shadow-md md:w-1/3 {baseExtraClasses}">
 	<section>
 		<h2 class="mb-2 text-lg font-semibold">{$__('sidecard.personal_information')}</h2>
 		<ul class="space-y-1 text-sm text-gray-700">

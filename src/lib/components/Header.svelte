@@ -6,11 +6,11 @@
 </script>
 
 <div class="flex items-center md:flex-row gap-4 flex-col justify-between px-6 py-4">
-	<div class="flex items-center space-x-4">
+	<div class="flex flex-col md:flex-row items-center space-x-4">
 		<img
 			src="/images/photo.webp"
 			alt="Profile"
-			class="h-24 w-24 rounded-full shadow-2xl shadow-indigo-200"
+			class="h-32 w-auto md:h-24 rounded-full shadow-2xl shadow-indigo-200"
 		/>
 		<div>
 			<h1 class="text-xl font-bold text-slate-700">{$__('header.full_name')}</h1>

@@ -50,7 +50,7 @@
 	<Navbar />
 
 	<div class="flex flex-col space-y-6 px-6 py-6 md:flex-row md:space-y-0 md:space-x-6">
-		<SideCard />
+		<SideCard baseExtraClasses="hidden md:block"/>
 
 		<div class="space-y-6 md:w-2/3">
 			{@render children()}

@@ -6,9 +6,11 @@ interface Translations {
 
 export default {
 	en: {
-		'title': 'Amir Ghamari - Backend Developer',
-		'description': 'Amir Ghamari - Backend Developer, Laravel, PHP, Python, Django, API Development, Microservices, Application Security',
-		'keywords': 'Amir Ghamari, Backend Developer, Laravel, PHP, Python, Django, API Development, Microservices, Application Security',
+		title: 'Amir Ghamari - Backend Developer',
+		description:
+			'Amir Ghamari - Backend Developer, Laravel, PHP, Python, Django, API Development, Microservices, Application Security',
+		keywords:
+			'Amir Ghamari, Backend Developer, Laravel, PHP, Python, Django, API Development, Microservices, Application Security',
 		'header.full_name': 'Amir Hossein Ghamari',
 		'header.profession': 'Backend Developer',
 		'header.location': 'Location',
@@ -80,12 +82,16 @@ export default {
 		'sidecard.date_of_graduation': 'Date',
 		'sidecard.place_of_graduation_desc': 'Shahram Toloui Technical and Vocational High School',
 		'sidecard.qualification_desc': 'Diploma in Computer Software Engineering',
-		'sidecard.date_of_graduation_desc': '{{year}}'
+		'sidecard.date_of_graduation_desc': '{{year}}',
+		'projects.note':
+			'Most projects showcased here are personal or freelancing projects. Due to NDA agreements, some professional projects cannot be displayed.'
 	},
 	fa: {
-		'title': 'امیر قمری - توسعه‌دهنده‌ی بک‌اند',
-		'description': 'امیر قمری - توسعه‌دهنده‌ی بک‌اند، لاراول، PHP، پایتون، جنگو، توسعه API، میکروسرویس‌ها، امنیت نرم‌افزار',
-		'keywords': 'امیر قمری، توسعه‌دهنده‌ی بک‌اند، لاراول، PHP، پایتون، جنگو، توسعه API، میکروسرویس‌ها، امنیت نرم‌افزار',
+		title: 'امیر قمری - توسعه‌دهنده‌ی بک‌اند',
+		description:
+			'امیر قمری - توسعه‌دهنده‌ی بک‌اند، لاراول، PHP، پایتون، جنگو، توسعه API، میکروسرویس‌ها، امنیت نرم‌افزار',
+		keywords:
+			'امیر قمری، توسعه‌دهنده‌ی بک‌اند، لاراول، PHP، پایتون، جنگو، توسعه API، میکروسرویس‌ها، امنیت نرم‌افزار',
 		'header.full_name': 'امیرحسین قمری',
 		'header.profession': 'توسعه‌دهنده‌ی بک‌اند',
 		'header.location': 'محل سکونت',
@@ -93,7 +99,7 @@ export default {
 		'header.current_position': 'سمت فعلی',
 		'header.available_for': 'آماده همکاری به صورت',
 		'header.current_position_desc': 'بک‌اند فریلنسر و مدرس برنامه‌نویسی',
-		'header.available_for_desc': 'ریموت (توسعه‌دهنده بک‌اند)',
+		'header.available_for_desc': 'دورکاری (توسعه‌دهنده بک‌اند)',
 		'header.get_in_touch': 'تماس با من',
 		'nav.resume': 'رزومه',
 		'nav.skills': 'مهارت‌ها و توانمندی‌ها',
@@ -104,7 +110,7 @@ export default {
 								توی این مدت APIهای مختلفی توسعه دادم، یه <strong>مبدل سند اختصاصی</strong> با پشتیبانی از زبان فارسی نوشتم (با استفاده از LibreOffice و Unoconv) و <strong>جستجوی پرترافیک یه استارتاپ بزرگ</strong> رو به میکروسرویس بهینه‌ای تبدیل کردم که بتونه هم‌زمان چند ده هزار کاربر رو پاسخ بده.<br />
 								با تکنولوژی‌های فرانت‌اند آشنا هستم و همکاری مؤثری با تیم فرانت دارم. همچنین تجربه‌ی کار با <strong>Python و Django</strong> برای ساخت API رو هم دارم.<br />
 								به <strong>امنیت نرم‌افزار</strong>، مخصوصاً اصول OWASP، علاقه‌ی زیادی دارم.<br />
-								در حال حاضر دنبال همکاری با یه تیم حرفه‌ای یا پروژه‌های <strong>ریموت بک‌اند</strong> هستم.`,
+								در حال حاضر دنبال همکاری با یه تیم حرفه‌ای یا پروژه‌های <strong>دورکاری بک‌اند</strong> هستم.`,
 		'resume.experience': 'تجریبات',
 		'resume.experience_desc': [
 			`<p class="font-medium">فریلنسر توسعه‌دهنده بک‌اند و مدرس برنامه‌نویسی</p>
@@ -126,7 +132,7 @@ export default {
 			`,
 
 			`<p class="font-medium">فریلنسر وب و اینترنت اشیاء</p>
-			<p class="text-sm text-gray-500">دورکاری · {{start_date_freelance_2}} تا {{end_date_freelance_2}}</p>
+			<p class="text-sm text-gray-500">Freelancer.com · دورکاری · {{start_date_freelance_2}} تا {{end_date_freelance_2}}</p>
 			<ul class="mt-1 list-inside list-disc space-y-1 text-sm text-gray-700">
 				<li>انجام پروژه‌های پیشرفته با لاراول و وردپرس، از جمله توسعه افزونه و اتصال به APIها.</li>
 				<li>شروع پروژه‌های برنامه‌نویسی میکروکنترلر و ساخت ابزارهای الکترونیکی و نمونه‌های اولیه IoT.</li>
@@ -165,6 +171,8 @@ export default {
 		'sidecard.date_of_graduation': 'تاریخ فارغ‌التحصیلی',
 		'sidecard.place_of_graduation_desc': 'مدرسه‌ی فنی و حرفه‌ای شهید شهرام طلوعی',
 		'sidecard.qualification_desc': 'دیپلم نرم‌افزار کامپیوتر',
-		'sidecard.date_of_graduation_desc': '{{year}}'
+		'sidecard.date_of_graduation_desc': '{{year}}',
+		'projects.note':
+			'پروژه‌های نمایش داده شده در اینجا عمدتاً پروژه‌های شخصی یا فریلنسی هستند. به دلیل قرارداد محرمانگی، امکان نمایش برخی از پروژه‌های حرفه‌ای وجود ندارد.'
 	}
 } as Translations;
