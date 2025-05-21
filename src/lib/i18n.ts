@@ -1,8 +1,8 @@
 import { browser } from '$app/environment';
-import { derived, writable } from 'svelte/store';
-import translations from '$lib/translations';
 import { getCookie, setCookie } from '$lib/cookies';
-import type { Writable, Readable } from 'svelte/store';
+import translations from '$lib/translations';
+import type { Readable, Writable } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
 
 export const locales: string[] = Object.keys(translations);
 const DEFAULT_LANG: string = 'en';

@@ -12,10 +12,10 @@
 
 	let yearsOfExperience = '5';
 
-	function formatDate(date : string) {
+	function formatDate(date: string) {
 		const dateObj = new Date(date);
 		return dateObj.toLocaleDateString($locale, {
-			year: 'numeric',
+			year: 'numeric'
 		});
 	}
 
@@ -38,20 +38,18 @@
 </script>
 
 <div transition:slide>
-	{#key $locale}
-		<section>
-			<SideCard baseExtraClasses="block md:hidden mb-4"/>
-			
-			<h2 class="text-lg font-semibold">{$__('resume.brief')}</h2>
-			<p
-				class="mt-1 text-sm text-gray-700"
-				use:innerHtml={$__('resume.brief_desc', { years_of_experience: yearsOfExperience })}
-			></p>
-		</section>
+	<section>
+		<SideCard baseExtraClasses="block md:hidden mb-4" />
 
-		<section>
-			<h2 class="text-lg font-semibold">{$__('resume.experience')}</h2>
-			<div class="mt-2" use:innerHtml={$__('resume.experience_desc', experienceVariables)}></div>
-		</section>
-	{/key}
+		<h2 class="text-lg font-semibold">{$__('resume.brief')}</h2>
+		<p
+			class="mt-1 text-sm text-gray-700"
+			use:innerHtml={$__('resume.brief_desc', { years_of_experience: yearsOfExperience })}
+		></p>
+	</section>
+
+	<section>
+		<h2 class="text-lg font-semibold">{$__('resume.experience')}</h2>
+		<div class="mt-2" use:innerHtml={$__('resume.experience_desc', experienceVariables)}></div>
+	</section>
 </div>

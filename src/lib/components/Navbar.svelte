@@ -3,7 +3,7 @@
 	import Languages from 'virtual:icons/hugeicons/language-skill';
 	import HamburgerMenu from 'virtual:icons/hugeicons/menu-01';
 
-	import { __, locale, locales } from '$lib/i18n';
+	import { __, locale, localeLoaded, locales } from '$lib/i18n';
 	import { slide } from 'svelte/transition';
 
 	let isMenuOpen = $state(false);
@@ -12,7 +12,6 @@
 <div
 	class="flex justify-between border-b border-gray-200 px-6 align-middle text-sm font-medium text-gray-600 md:py-3"
 >
-	<!-- Mobile Hamburger -->
 	<button
 		class="mb-2 self-end md:hidden"
 		onclick={() => (isMenuOpen = !isMenuOpen)}
@@ -37,7 +36,10 @@
 				<Languages
 					class="text-neutral text-lg"
 					onclick={() => {
-						$locale = $locale === 'en' ? 'fa' : 'en';
+						localeLoaded.set(false);
+						setTimeout(() => {
+							$locale = $locale === 'en' ? 'fa' : 'en';
+						}, 500);
 					}}
 				/>
 				<div
@@ -47,7 +49,12 @@
 						<button
 							class="text-md w-full rounded-md px-2 py-1 text-start font-bold text-gray-700 hover:bg-gray-100"
 							class:active={$locale === lang}
-							onclick={() => ($locale = lang)}
+							onclick={() => {
+								localeLoaded.set(false);
+								setTimeout(() => {
+									$locale = lang;
+								}, 500);
+							}}
 						>
 							{lang === 'en' ? 'English' : 'فارسی'}
 						</button>
@@ -58,17 +65,22 @@
 	</div>
 </div>
 {#if isMenuOpen}
-	<!-- content here -->
-	<!-- Navigation Links -->
 	<div
 		transition:slide
-		class="relative mt-2 z-50 flex flex-col w-full items-center justify-center self-start md:hidden"
+		class="relative z-50 mt-2 flex w-full flex-col items-center justify-center self-start md:hidden"
 	>
-		<div class="flex flex-col space-y-4 w-full px-2">
-			<a href="/" class:active-nav={current_section.value == 'resume'} class="ps-6">{$__('nav.resume')}</a>
-			<a href="/skills" class:active-nav={current_section.value == 'skills'} class="ps-6">{$__('nav.skills')}</a>
-			<a href="/stacks" class:active-nav={current_section.value == 'stack'} class="ps-6">{$__('nav.stacks')}</a>
-			<a href="/projects" class:active-nav={current_section.value == 'projects'} class="ps-6">{$__('nav.projects')}</a
+		<div class="flex w-full flex-col space-y-4 px-2">
+			<a href="/" class:active-nav={current_section.value == 'resume'} class="ps-6"
+				>{$__('nav.resume')}</a
+			>
+			<a href="/skills" class:active-nav={current_section.value == 'skills'} class="ps-6"
+				>{$__('nav.skills')}</a
+			>
+			<a href="/stacks" class:active-nav={current_section.value == 'stack'} class="ps-6"
+				>{$__('nav.stacks')}</a
+			>
+			<a href="/projects" class:active-nav={current_section.value == 'projects'} class="ps-6"
+				>{$__('nav.projects')}</a
 			>
 		</div>
 	</div>

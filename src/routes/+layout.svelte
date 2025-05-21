@@ -2,12 +2,12 @@
 	import '../app.css';
 
 	import { dev } from '$app/environment';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import Header from '$lib/components/Header.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import SideCard from '$lib/components/SideCard.svelte';
 	import { __, locale, localeLoaded } from '$lib/i18n';
 	import { current_section } from '$lib/stores.svelte';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { backInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
@@ -39,32 +39,34 @@
 	<meta name="author" content="Amir Ghamari" />
 </svelte:head>
 
-<div
-	class:rtl={$locale === 'fa'}
-	class="card mx-auto my-8 max-w-6xl overflow-hidden rounded-lg bg-gray-300 shadow-md"
->
-	<!-- Header -->
-	<Header />
+{#key $locale}
+	<div
+		class:rtl={$locale === 'fa'}
+		class="card mx-auto my-8 max-w-6xl overflow-hidden rounded-lg bg-gray-300 shadow-md"
+	>
+		<!-- Header -->
+		<Header />
 
-	<!-- Navigation Tabs -->
-	<Navbar />
+		<!-- Navigation Tabs -->
+		<Navbar />
 
-	<div class="flex flex-col space-y-6 px-6 py-6 md:flex-row md:space-y-0 md:space-x-6">
-		<SideCard baseExtraClasses="hidden md:block"/>
+		<div class="flex flex-col space-y-6 px-6 py-6 md:flex-row md:space-y-0 md:space-x-6">
+			<SideCard baseExtraClasses="hidden md:block" />
 
-		<div class="space-y-6 md:w-2/3">
-			{@render children()}
+			<div class="space-y-6 md:w-2/3">
+				{@render children()}
+			</div>
 		</div>
 	</div>
-</div>
 
-<div>
-	<p class="fixed start-1 bottom-1 -z-10 text-sm !text-gray-300">
-		{$__('last_updated', {
-			date: lastUpdateDate
-		})}
-	</p>
-</div>
+	<div>
+		<p class="fixed start-1 bottom-1 -z-10 text-sm !text-gray-300">
+			{$__('last_updated', {
+				date: lastUpdateDate
+			})}
+		</p>
+	</div>
+{/key}
 
 {#if !$localeLoaded}
 	<div

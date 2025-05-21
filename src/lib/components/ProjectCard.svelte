@@ -5,8 +5,8 @@
 </script>
 
 <div class="mb-6 flex rounded-lg bg-white p-6 shadow-sm">
-	<div class="w-1/4 flex-shrink-0">
-		<img class="h-32 rounded-lg bg-gray-100" src={project.image} alt={project.title} />
+	<div class="w-1/4 flex-shrink-0 content-evenly">
+		<img class="w-32 h-auto rounded-lg m-auto" src={project.image} alt={project.title} />
 	</div>
 	<div class="w-3/4 ps-4">
 		<h2 class="mb-2 text-xl font-semibold">{project.title}</h2>

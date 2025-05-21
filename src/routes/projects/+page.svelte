@@ -18,17 +18,17 @@
 
 	let projectEntries: ProjectEntry[] = $state($__('projects.list') as unknown as ProjectEntry[]);
 </script>
-
+	
 <div transition:slide>
 	<p class="mb-4 text-start text-gray-500">
 		{$__('projects.note')}
 	</p>
-
+	
 	<div class="mx-auto max-w-4xl">
 		{#each projectEntries as project}
-			<div onclick={() => triggerModal(project)} class="cursor-pointer">
-				<ProjectCard {project} />
-			</div>
+		<div aria-hidden="true" onclick={() => triggerModal(project)} class="cursor-pointer">
+			<ProjectCard {project} />
+		</div>
 		{/each}
 	</div>
 </div>
