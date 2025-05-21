@@ -5,6 +5,7 @@
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
 		"@iconify-json/arcticons": "^1.2.25",
+		"@iconify-json/catppuccin": "^1.2.11",
 		"@iconify-json/cib": "^1.2.2",
 		"@iconify-json/hugeicons": "^1.2.5",
 		"@sveltejs/adapter-static": "^3.0.8",

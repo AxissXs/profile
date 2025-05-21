@@ -4,6 +4,8 @@ interface Translations {
 	};
 }
 
+import {projects_en, projects_fa} from '$lib/projects';
+
 export default {
 	en: {
 		title: 'Amir Ghamari - Backend Developer',
@@ -84,7 +86,8 @@ export default {
 		'sidecard.qualification_desc': 'Diploma in Computer Software Engineering',
 		'sidecard.date_of_graduation_desc': '{{year}}',
 		'projects.note':
-			'Most projects showcased here are personal or freelancing projects. Due to NDA agreements, some professional projects cannot be displayed.'
+			'Most projects showcased here are personal or freelancing projects. Due to NDA agreements, some professional projects cannot be displayed.',
+		'projects.list': projects_en
 	},
 	fa: {
 		title: 'امیر قمری - توسعه‌دهنده‌ی بک‌اند',
@@ -173,6 +176,7 @@ export default {
 		'sidecard.qualification_desc': 'دیپلم نرم‌افزار کامپیوتر',
 		'sidecard.date_of_graduation_desc': '{{year}}',
 		'projects.note':
-			'پروژه‌های نمایش داده شده در اینجا عمدتاً پروژه‌های شخصی یا فریلنسی هستند. به دلیل قرارداد محرمانگی، امکان نمایش برخی از پروژه‌های حرفه‌ای وجود ندارد.'
+			'پروژه‌های نمایش داده شده در اینجا عمدتاً پروژه‌های شخصی یا فریلنسی هستند. به دلیل قرارداد محرمانگی، امکان نمایش برخی از پروژه‌های حرفه‌ای وجود ندارد.',
+		'projects.list': projects_fa
 	}
 } as Translations;
