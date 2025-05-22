@@ -1,8 +1,13 @@
+import type { Component } from "svelte";
+import type { SVGAttributes } from "svelte/elements";
+
 export type AvailableSections = 'resume' | 'stack' | 'projects' | 'skills';
+
+export type TechLogo = Component<SVGAttributes<SVGSVGElement>>;
 
 export type Tech = {
 	name: string;
-	logo: string;
+	logo: TechLogo;
 };
 
 export type ProjectEntry = {

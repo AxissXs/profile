@@ -44,12 +44,12 @@
 		<h2 class="text-lg font-semibold">{$__('resume.brief')}</h2>
 		<p
 			class="mt-1 text-sm text-gray-700"
-			use:innerHtml={$__('resume.brief_desc', { years_of_experience: yearsOfExperience })}
+			use:innerHtml={$__('resume.brief_desc', { years_of_experience: yearsOfExperience }) as string[]}
 		></p>
 	</section>
 
 	<section>
 		<h2 class="text-lg font-semibold">{$__('resume.experience')}</h2>
-		<div class="mt-2" use:innerHtml={$__('resume.experience_desc', experienceVariables)}></div>
+		<div class="mt-2" use:innerHtml={$__('resume.experience_desc', experienceVariables) as string[]}></div>
 	</section>
 </div>

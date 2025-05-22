@@ -1,104 +1,5 @@
-import type { ProjectEntry, Tech } from './types';
-// import PHP from "virtual:icons/catppuccin/php"
-
-export let technologies: { [key: string]: Tech } = {
-	React: {
-		name: 'React',
-		logo: 'https://placehold.co/32x32/FFF/00ffff?font=noto-sans&text=React'
-	},
-	Vue: {
-		name: 'Vue',
-		logo: 'https://placehold.co/32x32/FFF/ffff00?font=noto-sans&text=Vue'
-	},
-	NodeJS: {
-		name: 'Node.js',
-		logo: 'https://placehold.co/32x32/FFF/00ff00?font=noto-sans&text=Node.js'
-	},
-	MongoDB: {
-		name: 'MongoDB',
-		logo: 'https://placehold.co/32x32/FFF/00ff00?font=noto-sans&text=MongoDB'
-	},
-	Firebase: {
-		name: 'Firebase',
-		logo: 'https://placehold.co/32x32/FFF/ffff00?font=noto-sans&text=Firebase'
-	},
-	TailwindCSS: {
-		name: 'Tailwind CSS',
-		logo: 'https://placehold.co/32x32/FFF/0000ff?font=noto-sans&text=Tailwind'
-	},
-	HTML: {
-		name: 'HTML',
-		logo: 'https://placehold.co/32x32/FFF/ff7f50?font=noto-sans&text=HTML'
-	},
-	CSS: {
-		name: 'CSS',
-		logo: 'https://placehold.co/32x32/FFF/4682b4?font=noto-sans&text=CSS'
-	},
-	JavaScript: {
-		name: 'JavaScript',
-		logo: 'https://placehold.co/32x32/FFF/ffff00?font=noto-sans&text=JS'
-	},
-	PHP: {
-		name: 'PHP',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=PHP'
-	},
-	Laravel: {
-		name: 'Laravel',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Laravel'
-	},
-	MySQL: {
-		name: 'MySQL',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=MySQL'
-	},
-	Redis: {
-		name: 'Redis',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Redis'
-	},
-	Docker: {
-		name: 'Docker',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Docker'
-	},
-	RESTfulAPI: {
-		name: 'RESTful API',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=REST'
-	},
-	Git: {
-		name: 'Git',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Git'
-	},
-	CICD: {
-		name: 'CI/CD',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=CI/CD'
-	},
-	Linux: {
-		name: 'Linux',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Linux'
-	},
-	Svelte: {
-		name: 'Svelte',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Svelte'
-	},
-	Serverless: {
-		name: 'Serverless',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Serverless'
-	},
-	Vercel: {
-		name: 'Vercel',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=Vercel'
-	},
-	NeonDB: {
-		name: 'NeonDB',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=NeonDB'
-	},
-	TypeScript: {
-		name: 'TypeScript',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=TypeScript'
-	},
-	PostgreSQL: {
-		name: 'PostgreSQL',
-		logo: 'https://placehold.co/32x32/FFF/ff4500?font=noto-sans&text=PostgreSQL'
-	}
-};
+import type { ProjectEntry } from './types';
+import { Technologies } from './technologies';
 
 export let projects_fa: ProjectEntry[] = [
 	{
@@ -115,16 +16,17 @@ export let projects_fa: ProjectEntry[] = [
 			'/images/projects/tesmino.webp'
 		],
 		techs: [
-			// PHP، Laravel، MySQL، Redis، Docker، RESTful API، Git، CI/CD، Linux
-			technologies.PHP,
-			technologies.Laravel,
-			technologies.MySQL,
-			technologies.Redis,
-			technologies.Docker,
-			technologies.RESTfulAPI,
-			technologies.Git,
-			technologies.CICD,
-			technologies.Linux
+			Technologies.PHP,
+			Technologies.Laravel,
+			Technologies.MySQL,
+			Technologies.Redis,
+			Technologies.Docker,
+			Technologies.DevOps,
+			Technologies.RESTfulAPI,
+			Technologies.Git,
+			Technologies.CICD,
+			Technologies.Linux,
+			Technologies.Server
 		]
 	},
 	{
@@ -140,15 +42,15 @@ export let projects_fa: ProjectEntry[] = [
 			'/images/projects/tesmino.webp'
 		],
 		techs: [
-			technologies.PHP,
-			technologies.Laravel,
-			technologies.MySQL,
-			technologies.Redis,
-			technologies.Docker,
-			technologies.RESTfulAPI,
-			technologies.Git,
-			technologies.CICD,
-			technologies.Linux
+			Technologies.PHP,
+			Technologies.Laravel,
+			Technologies.MySQL,
+			Technologies.Redis,
+			Technologies.Docker,
+			Technologies.RESTfulAPI,
+			Technologies.Git,
+			Technologies.CICD,
+			Technologies.Linux
 		]
 	},
 	{
@@ -158,13 +60,18 @@ export let projects_fa: ProjectEntry[] = [
 		full_description: '',
 		screenshots: ['/images/projects/spycreed.webp'],
 		techs: [
-			// PHP، Laravel، MySQL، Redis، Docker، RESTful API، Git، CI/CD، Linux
-			technologies.Svelte,
-			technologies.Serverless,
-			technologies.Vercel,
-			technologies.NeonDB,
-			technologies.TypeScript,
-			technologies.PostgreSQL
+			Technologies.CICD,
+			Technologies.NodeJS,
+			Technologies.Svelte,
+			Technologies.Serverless,
+			Technologies.Vercel,
+			Technologies.NeonDB,
+			Technologies.TypeScript,
+			Technologies.PostgreSQL,
+			Technologies.TailwindCSS,
+			Technologies.HTML,
+			Technologies.CSS,
+			Technologies.JavaScript
 		]
 	}
 ];
@@ -178,16 +85,17 @@ export let projects_en: ProjectEntry[] = [
 		screenshots: [''],
 		image: 'https://tesmino.com/_nuxt/labled-logo.1bfc2b1b.svg',
 		techs: [
-			// PHP، Laravel، MySQL، Redis، Docker، RESTful API، Git، CI/CD، Linux
-			technologies.PHP,
-			technologies.Laravel,
-			technologies.MySQL,
-			technologies.Redis,
-			technologies.Docker,
-			technologies.RESTfulAPI,
-			technologies.Git,
-			technologies.CICD,
-			technologies.Linux
+			Technologies.PHP,
+			Technologies.Laravel,
+			Technologies.MySQL,
+			Technologies.Redis,
+			Technologies.Docker,
+			Technologies.DevOps,
+			Technologies.RESTfulAPI,
+			Technologies.Git,
+			Technologies.CICD,
+			Technologies.Linux,
+			Technologies.Server
 		]
 	},
 	{
@@ -197,16 +105,15 @@ export let projects_en: ProjectEntry[] = [
 		full_description: '',
 		screenshots: [''],
 		techs: [
-			// PHP، Laravel، MySQL، Redis، Docker، RESTful API، Git، CI/CD، Linux
-			technologies.PHP,
-			technologies.Laravel,
-			technologies.MySQL,
-			technologies.Redis,
-			technologies.Docker,
-			technologies.RESTfulAPI,
-			technologies.Git,
-			technologies.CICD,
-			technologies.Linux
+			Technologies.PHP,
+			Technologies.Laravel,
+			Technologies.MySQL,
+			Technologies.Redis,
+			Technologies.Docker,
+			Technologies.RESTfulAPI,
+			Technologies.Git,
+			Technologies.CICD,
+			Technologies.Linux
 		]
 	},
 	{
@@ -216,12 +123,18 @@ export let projects_en: ProjectEntry[] = [
 		full_description: '',
 		screenshots: ['/images/projects/spycreed.webp'],
 		techs: [
-			technologies.Svelte,
-			technologies.Serverless,
-			technologies.Vercel,
-			technologies.NeonDB,
-			technologies.TypeScript,
-			technologies.PostgreSQL
+			Technologies.CICD,
+			Technologies.NodeJS,
+			Technologies.Svelte,
+			Technologies.Serverless,
+			Technologies.Vercel,
+			Technologies.NeonDB,
+			Technologies.TypeScript,
+			Technologies.PostgreSQL,
+			Technologies.TailwindCSS,
+			Technologies.HTML,
+			Technologies.CSS,
+			Technologies.JavaScript
 		]
 	}
 ];

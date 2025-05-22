@@ -59,7 +59,7 @@ function translate(
 	return text;
 }
 
-export const __: Readable<(key: string, vars?: Record<string, string>) => string> = derived(
+export const __: Readable<(key: string, vars?: Record<string, string>) => string | object> = derived(
 	locale,
 	($locale) => {
 		return (key: string, vars = {}) => translate($locale, key, vars);

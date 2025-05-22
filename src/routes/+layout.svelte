@@ -34,8 +34,8 @@
 
 	<title>{$__('title')}</title>
 
-	<meta name="description" content={$__('description')} />
-	<meta name="keywords" content={$__('keywords')} />
+	<meta name="description" content={$__('description') as string} />
+	<meta name="keywords" content={$__('keywords') as string} />
 	<meta name="author" content="Amir Ghamari" />
 </svelte:head>
 
