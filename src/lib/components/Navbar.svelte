@@ -7,6 +7,15 @@
 	import { slide } from 'svelte/transition';
 
 	let isMenuOpen = $state(false);
+
+	function changeLocale(selectedLocale: 'en' | 'fa') {
+		if (selectedLocale == $locale) return;
+
+		localeLoaded.set(false);
+		setTimeout(() => {
+			$locale = selectedLocale;
+		}, 500);
+	}
 </script>
 
 <div
@@ -35,26 +44,16 @@
 			<div class="hover:text-primary group hover:cursor-pointer">
 				<Languages
 					class="text-neutral text-lg"
-					onclick={() => {
-						localeLoaded.set(false);
-						setTimeout(() => {
-							$locale = $locale === 'en' ? 'fa' : 'en';
-						}, 500);
-					}}
+					onclick={() => changeLocale($locale === 'en' ? 'fa' : 'en')}
 				/>
 				<div
 					class="absolute end-0 top-full hidden min-w-[100px] rounded-md bg-white shadow-lg group-hover:block"
 				>
 					{#each locales as lang}
 						<button
-							class="text-md w-full rounded-md px-2 py-1 text-start font-bold text-gray-700 hover:bg-gray-100"
+							class="text-md hover:text-primary w-full cursor-pointer rounded-md px-2 py-1 text-start font-bold text-gray-700 hover:bg-gray-100"
 							class:active={$locale === lang}
-							onclick={() => {
-								localeLoaded.set(false);
-								setTimeout(() => {
-									$locale = lang;
-								}, 500);
-							}}
+							onclick={() => changeLocale(lang as 'en' | 'fa')}
 						>
 							{lang === 'en' ? 'English' : 'فارسی'}
 						</button>

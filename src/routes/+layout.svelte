@@ -8,6 +8,8 @@
 	import { __, locale, localeLoaded } from '$lib/i18n';
 	import { current_section } from '$lib/stores.svelte';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
 	import { backInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
@@ -22,6 +24,7 @@
 	);
 
 	let { children, data } = $props();
+	injectSpeedInsights();
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>

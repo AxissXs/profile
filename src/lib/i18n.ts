@@ -38,9 +38,9 @@ function translate(
 	if (!key) throw new Error('no key provided to translation function');
 	if (!locale) throw new Error(`no locale provided for key "${key}"`);
 
-	let text = translations[locale]?.[key] ?? key;
-
-	if (!text) return key;
+	// if translation isn't found for the selected locale/key pair, find key in default_lang, else just return key as text
+	let text = translations[locale]?.[key] ?? translations[DEFAULT_LANG]?.[key] ?? key;
+	if(text == key) return text;
 
 	// Handle array or object values
 	if (typeof text === 'object') {

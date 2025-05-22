@@ -22,14 +22,14 @@
 	let experienceVariables = $state({
 		start_date_freelance_1: formatDate('2015'),
 		end_date_freelance_1: 'end f1',
+		start_date_tesmino: 'start t',
+		end_date_tesmino: 'end t',
 		start_date_freelance_2: 'start f2',
 		end_date_freelance_2: 'end f2',
-		start_date_freelance_3: 'start f3',
-		end_date_freelance_3: 'تا اکنون',
 		start_date_jajiga: 'start j',
 		end_date_jajiga: 'end j',
-		start_date_tesmino: 'start t',
-		end_date_tesmino: 'end t'
+		start_date_freelance_3: 'start f3',
+		end_date_freelance_3: 'تا اکنون'
 	});
 
 	function innerHtml(node: HTMLElement, html: string | string[]) {

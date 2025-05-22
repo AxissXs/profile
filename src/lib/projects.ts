@@ -58,7 +58,13 @@ export let projects_fa: ProjectEntry[] = [
 		description: `طراحی و پیاده‌سازی نسخه‌ی آنلاین بازی Spyfall با استفاده از Svelte و معماری Serverless در Vercel. بهره‌گیری از NeonDB برای مدیریت داده‌ها و اطمینان از عملکرد سریع و مقیاس‌پذیر در محیط‌های بدون سرور.`,
 		image: '/images/projects/spycreed-logo.webp',
 		full_description: '',
-		screenshots: ['/images/projects/spycreed.webp'],
+		screenshots: [
+			'/images/projects/spycreed-shot1.webp',
+			'/images/projects/spycreed-shot2.webp',
+			'/images/projects/spycreed-shot3.webp',
+			'/images/projects/spycreed-shot4.webp',
+			'/images/projects/spycreed-shot5.webp'
+		],
 		techs: [
 			Technologies.CICD,
 			Technologies.NodeJS,
@@ -121,7 +127,13 @@ export let projects_en: ProjectEntry[] = [
 		description: `Designed and implemented an online version of the Spyfall game using Svelte and a serverless architecture on Vercel. Utilized NeonDB for data management, ensuring fast and scalable performance in a serverless environment.`,
 		image: '/images/projects/spycreed-logo.webp',
 		full_description: '',
-		screenshots: ['/images/projects/spycreed.webp'],
+		screenshots: [
+			'/images/projects/spycreed-shot1.webp',
+			'/images/projects/spycreed-shot2.webp',
+			'/images/projects/spycreed-shot3.webp',
+			'/images/projects/spycreed-shot4.webp',
+			'/images/projects/spycreed-shot5.webp'
+		],
 		techs: [
 			Technologies.CICD,
 			Technologies.NodeJS,
