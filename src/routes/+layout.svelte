@@ -9,7 +9,6 @@
 	import { current_section } from '$lib/stores.svelte';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
-	import Clarity from '@microsoft/clarity';
 
 	import { backInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
@@ -29,8 +28,6 @@
 	//Analytics and stuff
 	injectSpeedInsights();
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
-	const projectId = 'ro64za21ya';
-	Clarity.init(projectId);
 </script>
 
 <svelte:head>
@@ -44,6 +41,21 @@
 	<meta name="description" content={$__('description') as string} />
 	<meta name="keywords" content={$__('keywords') as string} />
 	<meta name="author" content="Amir Ghamari" />
+
+	<script type="text/javascript">
+		(function (c, l, a, r, i, t, y) {
+			c[a] =
+				c[a] ||
+				function () {
+					(c[a].q = c[a].q || []).push(arguments);
+				};
+			t = l.createElement(r);
+			t.async = 1;
+			t.src = 'https://www.clarity.ms/tag/' + i;
+			y = l.getElementsByTagName(r)[0];
+			y.parentNode.insertBefore(t, y);
+		})(window, document, 'clarity', 'script', 'ro64za21ya');
+	</script>
 </svelte:head>
 
 {#key $locale}
