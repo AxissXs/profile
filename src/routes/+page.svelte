@@ -1,10 +1,9 @@
 <script lang="ts">
+	import SideCard from '$lib/components/SideCard.svelte';
+	import { __, locale } from '$lib/i18n';
 	import { current_section } from '$lib/stores.svelte';
 	import { slide } from 'svelte/transition';
 	import type { PageData } from './$types';
-	import { __, locale } from '$lib/i18n';
-	import { onMount } from 'svelte';
-	import SideCard from '$lib/components/SideCard.svelte';
 
 	let { data }: { data: PageData } = $props();
 
