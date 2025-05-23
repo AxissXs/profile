@@ -9,6 +9,7 @@
 	import { current_section } from '$lib/stores.svelte';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import Clarity from '@microsoft/clarity';
 
 	import { backInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
@@ -24,9 +25,12 @@
 	);
 
 	let { children, data } = $props();
-	injectSpeedInsights();
 
+	//Analytics and stuff
+	injectSpeedInsights();
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
+	const projectId = 'ro64za21ya';
+	Clarity.init(projectId);
 </script>
 
 <svelte:head>
