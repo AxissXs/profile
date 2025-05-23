@@ -15,12 +15,13 @@
 	function formatDate(date: string) {
 		const dateObj = new Date(date);
 		return dateObj.toLocaleDateString($locale, {
-			year: 'numeric'
+			year: 'numeric',
+			month: 'short'
 		});
 	}
 
 	let experienceVariables = $state({
-		start_date_freelance_1: formatDate('2015'),
+		start_date_freelance_1: formatDate('2015/05'),
 		end_date_freelance_1: 'end f1',
 		start_date_tesmino: 'start t',
 		end_date_tesmino: 'end t',
