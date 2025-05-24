@@ -48,7 +48,7 @@ export default {
 			</ul>`,
 
 			`<p class="font-bold">Freelance Web & IoT Developer</p>
-			<p class="text-sm text-gray-500">Remote · {{start_date_freelance_2}} – {{end_date_freelance_2}}</p>
+			<p class="text-sm text-gray-500">Freelancer.com · Remote · {{start_date_freelance_2}} – {{end_date_freelance_2}}</p>
 			<ul class="mt-1 list-inside list-disc space-y-1 text-sm text-gray-700">	
 				<li>Worked on advanced Laravel and WordPress projects, including custom plugin development and API integrations.</li>	
 				<li>Started building microcontroller-based electronics projects, including automation tools and IoT prototypes.</li>	

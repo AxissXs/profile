@@ -22,6 +22,7 @@ import Server from 'virtual:icons/proicons/server';
 import DevOps from 'virtual:icons/carbon/ibm-devops-control';
 import TypeScript  from 'virtual:icons/proicons/typescript';
 import PostgreSQL from 'virtual:icons/lineicons/postgresql';
+import MySQL from 'virtual:icons/lineicons/mysql';
 import type { Tech } from './types';
 
 
@@ -68,7 +69,7 @@ export let Technologies: { [key: string]: Tech } = {
     },
     MySQL: {
         name: 'MySQL',
-        logo: PHP
+        logo: MySQL
     },
     Redis: {
         name: 'Redis',

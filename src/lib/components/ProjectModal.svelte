@@ -65,13 +65,13 @@
 
 				<button
 					onclick={() => scrollSlider(-1)}
-					class="absolute font-bold end-2 top-1/2 btn btn-circle bg-black/50 p-2 text-white hover:bg-black/70"
+					class="absolute border-1 border-gray-700 font-bold end-2 top-1/2 btn btn-circle bg-black/50 p-2 text-white hover:bg-black/70"
 				>
 					&gt;
 				</button>
 				<button
 					onclick={() => scrollSlider(1)}
-					class="absolute font-bold start-2 top-1/2 btn btn-circle bg-black/50 p-2 text-white hover:bg-black/70"
+					class="absolute border-1 border-gray-700 font-bold start-2 top-1/2 btn btn-circle bg-black/50 p-2 text-white hover:bg-black/70"
 				>
 					&lt;
 				</button>
