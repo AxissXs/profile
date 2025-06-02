@@ -4,7 +4,7 @@ interface Translations {
 	};
 }
 
-import {projects_en, projects_fa} from '$lib/projects';
+import { projects_en, projects_fa } from '$lib/lang/projects';
 
 export default {
 	en: {

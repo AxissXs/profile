@@ -1,4 +1,4 @@
-import type { ProjectEntry } from './types';
+import type { ProjectEntry } from '$lib/types';
 import { Technologies } from './technologies';
 
 export let projects_fa: ProjectEntry[] = [

@@ -12,6 +12,7 @@
 
 	import { backInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
+	import { page } from '$app/stores';
 
 	current_section.value = 'resume';
 
@@ -36,7 +37,12 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 	<link rel="manifest" href="/site.webmanifest" />
 
+	<link rel="alternate" hreflang="en" href="{$page.url.origin}/en" />
+    <link rel="alternate" hreflang="fa" href="{$page.url.origin}/fa" />
+
 	<title>{$__('title')}</title>
+
+	<meta name="language" content="{$locale}">
 
 	<meta name="description" content={$__('description') as string} />
 	<meta name="keywords" content={$__('keywords') as string} />

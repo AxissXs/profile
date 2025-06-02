@@ -3,11 +3,11 @@ import type { SVGAttributes } from "svelte/elements";
 
 export type AvailableSections = 'resume' | 'stack' | 'projects' | 'skills';
 
-export type TechLogo = Component<SVGAttributes<SVGSVGElement>>;
+export type LogoComponent = Component<SVGAttributes<SVGSVGElement>>;
 
 export type Tech = {
 	name: string;
-	logo: TechLogo;
+	logo: LogoComponent;
 };
 
 export type ProjectEntry = {

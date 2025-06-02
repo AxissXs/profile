@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { ProjectEntry, TechLogo } from '$lib/types';
+	import type { ProjectEntry, LogoComponent } from '$lib/types';
 
 	let { project }: { project: ProjectEntry } = $props();
 </script>
 
-{#snippet techLogo(logo: TechLogo)}
+{#snippet techLogo(logo: LogoComponent)}
 	{@const Component = logo}
 	<Component />
 {/snippet}
