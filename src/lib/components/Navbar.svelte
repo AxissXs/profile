@@ -47,7 +47,7 @@
 					onclick={() => changeLocale($locale === 'en' ? 'fa' : 'en')}
 				/>
 				<div
-					class="absolute end-0 top-full hidden min-w-[100px] rounded-md bg-white shadow-lg group-hover:block"
+					class="absolute end-0 top-full z-50 hidden min-w-[100px] rounded-md bg-white shadow-lg group-hover:block"
 				>
 					{#each locales as lang}
 						<button

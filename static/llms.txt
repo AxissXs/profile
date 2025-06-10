@@ -1,0 +1,33 @@
+# amirghamari.ir
+
+> Personal portfolio of Amir Hossein Ghamari, a freelance backend developer and programming instructor based in Guilan, Iran.
+
+## Summary
+
+Amir Hossein Ghamari is a backend developer with over 5 years of experience, specializing in Laravel and scalable web architecture. He has developed robust APIs and custom tools, focusing on performance and scalability.
+
+## Skills and Competencies
+
+- **Backend Development**: PHP, Laravel, MySQL
+- **Frontend Technologies**: HTML, CSS, JavaScript
+- **Version Control**: Git
+- **Programming Instruction**: Teaching programming concepts and best practices
+
+## Projects
+
+- **Tesmino – PR and Backlink Platform**: Developed and optimized the backend infrastructure, enhancing performance and scalability.
+- **Jajiga – Online Booking Platform for Accommodation Rentals**: Optimized backend and database, reducing server load and increasing capacity from ~3,000 to over 50,000 concurrent users.
+- **SpyCreed – Online Spyfall Game**: Designed and implemented using Svelte and serverless architecture on Vercel, ensuring fast and scalable performance.
+
+## Education
+
+- **Diploma in Computer Software Engineering**, Shahram Toloui Technical and Vocational High School, 2017
+
+## Languages
+
+- English
+- Persian
+
+## Availability
+
+- Open to remote backend development roles

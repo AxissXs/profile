@@ -1,5 +1,5 @@
-import type { Component } from "svelte";
-import type { SVGAttributes } from "svelte/elements";
+import type { Component } from 'svelte';
+import type { SVGAttributes } from 'svelte/elements';
 
 export type AvailableSections = 'resume' | 'stack' | 'projects' | 'skills';
 
@@ -17,4 +17,13 @@ export type ProjectEntry = {
 	image: string;
 	screenshots: string[];
 	techs: Tech[];
+};
+
+export type SkillEntry = {
+	logo: LogoComponent;
+	name: string;
+	description: string;
+	level: string; //TODO: Make it into an enum, somehow, with translation support
+	bgColor: string;
+	shadowColor: string;
 };
